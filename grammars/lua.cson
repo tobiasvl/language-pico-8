@@ -1,55 +1,51 @@
-'comment': 'Lua Syntax: version 0.8'
+'comment': 'Pico-8 Syntax: Version 0.1 (based on lua syntax version 0.8)'
 'fileTypes': [
-  'lua'
-  'nse'
-  'rockspec'
-  'luacheckrc'
-  'lakefile'
+  'p8'
 ]
-'firstLineMatch': '\\A#!.*?\\blua\\b'
-'name': 'Lua'
+'firstLineMatch': '^pico-8 cartridge // http://www.pico-8.com$'
+'name': 'Pico8'
 'patterns': [
   {
     'captures':
       '1':
-        'name': 'keyword.control.lua'
+        'name': 'keyword.control.p8'
       '2':
-        'name': 'entity.name.function.scope.lua'
+        'name': 'entity.name.function.scope.p8'
       '3':
         'name': 'entity.name.function.lua'
       '4':
-        'name': 'punctuation.definition.parameters.begin.lua'
+        'name': 'punctuation.definition.parameters.begin.p8'
       '5':
-        'name': 'variable.parameter.function.lua'
+        'name': 'variable.parameter.function.p8'
       '6':
-        'name': 'punctuation.definition.parameters.end.lua'
+        'name': 'punctuation.definition.parameters.end.p8'
     'match': '\\b(function)(?:\\s+([a-zA-Z_.:]+[.:])?([a-zA-Z_]\\w*)\\s*)?(\\()([^)]*)(\\))'
-    'name': 'meta.function.lua'
+    'name': 'meta.function.p8'
   }
   {
     'match': '(?<![\\d.])\\s0x[a-fA-F\\d]+|\\b\\d+(\\.\\d+)?([eE]-?\\d+)?|\\.\\d+([eE]-?\\d+)?'
-    'name': 'constant.numeric.lua'
+    'name': 'constant.numeric.p8'
   }
   {
     'begin': '\''
     'beginCaptures':
       '0':
-        'name': 'punctuation.definition.string.begin.lua'
+        'name': 'punctuation.definition.string.begin.p8'
     'end': '\''
     'endCaptures':
       '0':
-        'name': 'punctuation.definition.string.end.lua'
+        'name': 'punctuation.definition.string.end.p8'
     'name': 'string.quoted.single.lua'
     'patterns': [
       {
-        'include': 'punctuation.definition.string.begin.lua'
+        'include': 'punctuation.definition.string.begin.p8'
       }
       {
-        'include': 'punctuation.definition.string.end.lua'
+        'include': 'punctuation.definition.string.end.p8'
       }
       {
         'match': '\\\\.'
-        'name': 'constant.character.escape.lua'
+        'name': 'constant.character.escape.p8'
       }
     ]
   }
@@ -57,42 +53,22 @@
     'begin': '"'
     'beginCaptures':
       '0':
-        'name': 'punctuation.definition.string.begin.lua'
+        'name': 'punctuation.definition.string.begin.p8'
     'end': '"'
     'endCaptures':
       '0':
-        'name': 'punctuation.definition.string.end.lua'
-    'name': 'string.quoted.double.lua'
+        'name': 'punctuation.definition.string.end.p8'
+    'name': 'string.quoted.double.p8'
     'patterns': [
       {
-        'include': 'punctuation.definition.string.begin.lua'
+        'include': 'punctuation.definition.string.begin.p8'
       }
       {
-        'include': 'punctuation.definition.string.end.lua'
+        'include': 'punctuation.definition.string.end.p8'
       }
       {
         'match': '\\\\.'
-        'name': 'constant.character.escape.lua'
-      }
-    ]
-  }
-  {
-    'begin': '(?<=\\.cdef)\\s*(\\[(=*)\\[)'
-    'beginCaptures':
-      '0':
-        'name': 'string.quoted.other.multiline.lua'
-      '1':
-        'name': 'punctuation.definition.string.begin.lua'
-    'contentName': 'meta.embedded.lua'
-    'end': '(\\]\\2\\])'
-    'endCaptures':
-      '0':
-        'name': 'string.quoted.other.multiline.lua'
-      '1':
-        'name': 'punctuation.definition.string.end.lua'
-    'patterns': [
-      {
-        'include': 'source.c'
+        'name': 'constant.character.escape.p8'
       }
     ]
   }
@@ -100,69 +76,65 @@
     'begin': '(?<!--)\\[(=*)\\['
     'beginCaptures':
       '0':
-        'name': 'punctuation.definition.string.begin.lua'
+        'name': 'punctuation.definition.string.begin.p8'
     'end': '\\]\\1\\]'
     'endCaptures':
       '0':
-        'name': 'punctuation.definition.string.end.lua'
-    'name': 'string.quoted.other.multiline.lua'
+        'name': 'punctuation.definition.string.end.p8'
+    'name': 'string.quoted.other.multiline.p8'
   }
   {
     'begin': '--\\[(=*)\\['
     'captures':
       '0':
-        'name': 'punctuation.definition.comment.lua'
+        'name': 'punctuation.definition.comment.p8'
     'end': '\\]\\1\\]'
-    'name': 'comment.block.lua'
+    'name': 'comment.block.p8'
   }
   {
     'begin': '(^[ \\t]+)?(?=--(?!\\[(=*)\\[))'
     'beginCaptures':
       '1':
-        'name': 'punctuation.whitespace.comment.leading.lua'
+        'name': 'punctuation.whitespace.comment.leading.p8'
     'end': '(?!\\G)'
     'patterns': [
       {
         'begin': '--'
         'beginCaptures':
           '0':
-            'name': 'punctuation.definition.comment.lua'
+            'name': 'punctuation.definition.comment.p8'
         'end': '\\n'
-        'name': 'comment.line.double-dash.lua'
+        'name': 'comment.line.double-dash.p8'
       }
     ]
   }
   {
     'match': '\\b(and|or|not|break|do|else|for|if|elseif|return|then|repeat|while|until|end|function|local|in)\\b'
-    'name': 'keyword.control.lua'
+    'name': 'keyword.control.p8'
   }
   {
-    'match': '(?<![^.]\\.|:)\\b(false|nil|true|_G|_VERSION|math\\.(pi|huge))\\b|(?<![.])\\.{3}(?!\\.)'
-    'name': 'constant.language.lua'
+    'match': '(?<![^.]\\.|:)\\b(false|nil|true)\\b|(?<![.])\\.{3}(?!\\.)'
+    'name': 'constant.language.p8'
   }
   {
     'match': '(?<![^.]\\.|:)\\b(self)\\b'
-    'name': 'variable.language.self.lua'
+    'name': 'variable.language.self.p8'
   }
   {
-    'match': '(?<![^.]\\.|:)\\b(assert|collectgarbage|dofile|error|getfenv|getmetatable|ipairs|loadfile|loadstring|module|next|pairs|pcall|print|rawequal|rawget|rawset|require|select|setfenv|setmetatable|tonumber|tostring|type|unpack|xpcall)\\b(?=\\s*(?:[({"\']|\\[\\[))'
-    'name': 'support.function.lua'
-  }
-  {
-    'match': '(?<![^.]\\.|:)\\b(coroutine\\.(create|resume|running|status|wrap|yield)|string\\.(byte|char|dump|find|format|gmatch|gsub|len|lower|match|rep|reverse|sub|upper)|table\\.(concat|insert|maxn|remove|sort)|math\\.(abs|acos|asin|atan2?|ceil|cosh?|deg|exp|floor|fmod|frexp|ldexp|log|log10|max|min|modf|pow|rad|random|randomseed|sinh?|sqrt|tanh?)|io\\.(close|flush|input|lines|open|output|popen|read|tmpfile|type|write)|os\\.(clock|date|difftime|execute|exit|getenv|remove|rename|setlocale|time|tmpname)|package\\.(cpath|loaded|loadlib|path|preload|seeall)|debug\\.(debug|[gs]etfenv|[gs]ethook|getinfo|[gs]etlocal|[gs]etmetatable|getregistry|[gs]etupvalue|traceback))\\b(?=\\s*(?:[({"\']|\\[\\[))'
-    'name': 'support.function.library.lua'
+    'match': '(?<![^.]\\.|:)\\b(load|save|folder|ls|run|resume|reboot|stat|info|flip|printh|clip|pget|pset|sget|sset|fget|fset|print|cursor|color|cls|camera|circ|circfill|line|rect|rectfill|pal|palt|spr|sspr|add|del|all|foreach|pairs|btn|btnp|sfx|music|mget|mset|map|peek|poke|memcpy|reload|cstore|memset|max|min|mid|flr|cos|sin|atan2|sqrt|abs|rnd|srand|band|bor|bxor|bnot|shl|shr|sub|cartdata|dget|dset|setmetatable|cocreate|coresume|costatus|yield)\\b(?=\\s*(?:[({"\']|\\[\\[))'
+    'name': 'support.function.p8'
   }
   {
     'match': '\\b([A-Za-z_]\\w*)\\b(?=\\s*(?:[({"\']|\\[\\[))'
-    'name': 'support.function.any-method.lua'
+    'name': 'support.function.any-method.p8'
   }
   {
     'match': '(?<=[^.]\\.|:)\\b([A-Za-z_]\\w*)'
-    'name': 'variable.other.lua'
+    'name': 'variable.other.p8'
   }
   {
     'match': '\\+|-|%|#|\\*|\\/|\\^|==?|~=|<=?|>=?|(?<!\\.)\\.{2}(?!\\.)'
-    'name': 'keyword.operator.lua'
+    'name': 'keyword.operator.p8'
   }
 ]
-'scopeName': 'source.lua'
+'scopeName': 'source.p8'

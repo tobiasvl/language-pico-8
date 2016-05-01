@@ -1,4 +1,4 @@
-'.source.lua':
+'.source.p8':
   'editor':
     'commentStart': '-- '
     'increaseIndentPattern': '\\b(else|elseif|(local\\s+)?function|then|do|repeat)\\b((?!end).)*$|\\{\\s*$'
