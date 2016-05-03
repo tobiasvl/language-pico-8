@@ -1,6 +1,6 @@
 {
   "name": "language-pico8",
-  "version": "0.9.4",
+  "version": "0.0.0",
   "private": false,
   "author": "Keiya <keiyakins@gmail.com>",
   "description": "Pico-8 syntax and snippets. Derived from language-lua",
