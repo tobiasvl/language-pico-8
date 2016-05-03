@@ -7,7 +7,7 @@
 'patterns': [
   {
     'begin': '__lua__'
-    'end': '__gfx__'
+    'end': '^__'
     'patterns': [
       {
         'captures':
@@ -139,6 +139,76 @@
       {
         'match': '\\+|-|%|#|\\*|\\/|\\^|==?|~=|<=?|>=?|(?<!\\.)\\.{2}(?!\\.)'
         'name': 'keyword.operator.p8'
+      }
+    ]
+  }
+  {
+    'begin': 'gfx__'
+    'end': '^__'
+    'patterns':[
+      {
+        'match': '0+'
+        'name': 'constant.other.p8.gfx.zero'
+      }
+      {
+        'match': '1+'
+        'name': 'constant.other.p8.gfx.one'
+      }
+      {
+        'match': '2+'
+        'name': 'constant.other.p8.gfx.two'
+      }
+      {
+        'match': '3+'
+        'name': 'constant.other.p8.gfx.three'
+      }
+      {
+        'match': '4+'
+        'name': 'constant.other.p8.gfx.four'
+      }
+      {
+        'match': '5+'
+        'name': 'constant.other.p8.gfx.five'
+      }
+      {
+        'match': '6+'
+        'name': 'constant.other.p8.gfx.six'
+      }
+      {
+        'match': '7+'
+        'name': 'constant.other.p8.gfx.seven'
+      }
+      {
+        'match': '8+'
+        'name': 'constant.other.p8.gfx.eight'
+      }
+      {
+        'match': '9+'
+        'name': 'constant.other.p8.gfx.nine'
+      }
+      {
+        'match': 'a+'
+        'name': 'constant.other.p8.gfx.a'
+      }
+      {
+        'match': 'b+'
+        'name': 'constant.other.p8.gfx.b'
+      }
+      {
+        'match': 'c+'
+        'name': 'constant.other.p8.gfx.c'
+      }
+      {
+        'match': 'd+'
+        'name': 'constant.other.p8.gfx.d'
+      }
+      {
+        'match': 'e+'
+        'name': 'constant.other.p8.gfx.e'
+      }
+      {
+        'match': 'f+'
+        'name': 'constant.other.p8.gfx.f'
       }
     ]
   }
