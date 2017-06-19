@@ -143,7 +143,7 @@
     ]
   }
   {
-    'begin': 'gfx__'
+    'begin': 'gfx__|label__'
     'end': '^__'
     'patterns':[
       {
