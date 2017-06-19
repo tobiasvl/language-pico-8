@@ -27,7 +27,7 @@
         'name': 'meta.function.p8'
       }
       {
-        'match': '(?<![\\d.])\\s0x[a-fA-F\\d]+|\\b\\d+(\\.\\d+)?([eE]-?\\d+)?|\\.\\d+([eE]-?\\d+)?'
+        'match': '(?<![\\d.])0x[a-fA-F\\d]+|\\b\\d+(\\.\\d+)?([eE]-?\\d+)?|\\.\\d+([eE]-?\\d+)?'
         'name': 'constant.numeric.p8'
       }
       {
