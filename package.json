@@ -1,9 +1,14 @@
 {
   "name": "language-pico-8",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Tobias V. Langhoff <tobias@langhoff.no> (https://github.com/tobiasvl)",
-  "contributors": ["Keiya <keiyakins@gmail.com> (https://github.com/keiyakins)", "Jorge Garrido Oval <firezenk@gmail.com> (https://github.com/FireZenk)"],
-  "keywords": ["pico8"],
+  "contributors": [
+    "Keiya <keiyakins@gmail.com> (https://github.com/keiyakins)",
+    "Jorge Garrido Oval <firezenk@gmail.com> (https://github.com/FireZenk)"
+  ],
+  "keywords": [
+    "pico8"
+  ],
   "description": "PICO-8 language support in Atom",
   "repository": "https://github.com/tobiasvl/language-pico-8",
   "license": "MIT",
