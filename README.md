@@ -1,10 +1,11 @@
-pico-8 support in Atom
-======
+PICO-8 support in Atom
+======================
 
-Add syntax highlighting and snippets to pico-8 files in Atom.
+Add syntax highlighting and snippets to PICO-8 files in Atom.
 
 Common snippets
----
+---------------
+
 | Trigger       | Name                     | Body                 |
 | ------------- |--------------------------| ---------------------|
 | -[            | multiline comment        | --[[ comment... ]]   |
@@ -33,26 +34,18 @@ Common snippets
 | while         | while loop               | while condition do -- body... end |
 
 
-Author
-------
-__Keiya Bachhuber__
-* [https://github.com/keiyakins](https://github.com/keiyakins)
-
-Based heavily on work by [Jorge Garrido Oval](https://github.com/FireZenk).
-Honestly he probably wrote more of this than I did, but I'm claiming
-'authorship' so people will bother me about bits that I broke, not him.
-
-
 Contributors
----
+------------
+
+* Maintainer: __Tobias V. Langhoff__ ([https://github.com/tobiasvl](https://github.com/tobiasvl))
+* Forked from __Keiya Bachhuber__ ([https://github.com/keiyakins](https://github.com/keiyakins))'s package (no longer maintained)
+* Based heavily on [Jorge Garrido Oval](https://github.com/FireZenk)'s [language-lua](https://github.com/FireZenk/language-lua) package
+* Originally [converted](http://atom.io/docs/latest/converting-a-text-mate-bundle) from the [Lua TextMate bundle](https://github.com/textmate/lua.tmbundle)
 
 Contributions are greatly appreciated. Please fork this repository and open a
 pull request to add snippets, make grammar tweaks, etc.
 
 License
 ------
-Atom language-pico8 is released under the MIT license.
 
->Based on [Atom language-lua](https://github.com/FireZenk/language-lua),
-originally [converted](http://atom.io/docs/latest/converting-a-text-mate-bundle)
-from the [Lua TextMate bundle](https://github.com/textmate/lua.tmbundle).
+This package is released under the MIT license.
