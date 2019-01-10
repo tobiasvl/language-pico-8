@@ -3,7 +3,7 @@
   'p8'
 ]
 'firstLineMatch': '^pico-8 cartridge // http://www.pico-8.com$'
-'name': 'Pico8'
+'name': 'PICO-8'
 'patterns': [
   {
     'begin': '__lua__'
