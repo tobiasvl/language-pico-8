@@ -1,3 +1,9 @@
+:warning: __This fork is not maintained__ :warning:
+
+Please use the __language-pico8__ package: https://atom.io/packages/language-pico8 :warning:
+
+__New repository: https://github.com/tobiasvl/language-pico8__
+
 PICO-8 support in Atom
 ======================
 
